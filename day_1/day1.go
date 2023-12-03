@@ -12,7 +12,7 @@ import (
 
 // Rewrite understood the problem wrong upsiiii
 func Day1() {
-	file, err := os.Open("./day_1/example.txt")
+	file, err := os.Open("./day_1/input.txt")
 	if err != nil {
 		panic("Could not find file")
 	}
@@ -31,7 +31,8 @@ func Day1() {
 			}
 			n = strings.ReplaceAll(n, " ", "")
 		}
-		number, err := strconv.Atoi(n)
+		num := strings.Join([]string{string(n[0]), string(n[len(n)-1])}, "")
+		number, err := strconv.Atoi(num)
 		if err != nil {
 			panic(err)
 		}
