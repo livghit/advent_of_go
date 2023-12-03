@@ -10,7 +10,7 @@ import (
 	"unicode"
 )
 
-// Rewrite understood the problem wrong upsiiii
+// Refactor to cleaner code
 func Day1() {
 	file, err := os.Open("./day_1/input.txt")
 	if err != nil {
